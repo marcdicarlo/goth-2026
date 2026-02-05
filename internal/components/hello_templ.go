@@ -41,7 +41,7 @@ func Hello() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"p-4\"><h1 class=\"text-3xl font-bold text-blue-500\">Hello, World!</h1><progress class=\"uk-progress\" value=\"30\" max=\"100\"></progress></div>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"p-4\"><h1 class=\"text-3xl font-bold text-blue-500\">Hello, World!</h1></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
