@@ -1,3 +1,7 @@
+// Package main provides the entry point for the GOTH stack web application.
+//
+// This application combines Go, Templ, TailwindCSS, and HTMX to provide
+// a modern web development stack with hot reload support via Air.
 package main
 
 import (
@@ -15,6 +19,14 @@ import (
 	_ "github.com/joho/godotenv/autoload"
 )
 
+// main initializes and starts the HTTP server with graceful shutdown support.
+//
+// The server configuration:
+//   - Reads PORT from environment variable (defaults to 8080)
+//   - Serves static files from the /static/ directory
+//   - Applies middleware stack (logging, etc.)
+//   - Handles graceful shutdown on SIGINT, SIGTERM, or SIGQUIT
+//   - Allows 10 seconds for graceful shutdown before forcing close
 func main() {
 	var port string = os.Getenv("PORT")
 	if port == "" {
